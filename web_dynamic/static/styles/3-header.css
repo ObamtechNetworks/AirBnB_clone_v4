@@ -10,17 +10,20 @@ header .logo {
     height: 100%;
 }
 
-.avaliable {
+.available {
 	background-color: #ff545f;
 }
 
-#api_status {
-	position: absolute;
-	top: 50%;
-	right: 30px;
-	transform: tranlateY(-50%);
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background-color: #cccccc;
+header #api_status {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #cccccc;
 }

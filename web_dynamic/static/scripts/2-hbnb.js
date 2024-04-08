@@ -3,14 +3,14 @@ $(document).ready(function() {
     function checkAPIStatus() {
         $.ajax({
             type: 'GET',
-            url: 'http://0.0.0.0:5001/api/v1/status/',
+            url: 'http://127.0.0.1:5001/api/v1/status/',
             success: function(response) {
                 // If the status is "OK", add the class "available" to the div#api_status
                 if (response.status === 'OK') {
-                    $('#api_status').addClass('available');
+                    $('header div#api_status').css('background-color', '#ff545f');
                 } else {
                     // If the status is not "OK", remove the class "available" from the div#api_status
-                    $('#api_status').removeClass('available');
+                    $('header div#api_status').css('background-color', '#cccccc');;
                 }
             },
             error: function(error) {
